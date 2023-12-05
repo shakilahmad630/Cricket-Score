@@ -1,0 +1,19 @@
+<div class=" ">
+    <h1 class="text-4xl font-extrabold text-gray-800"> Live Score </h1>
+ <div class="card-container flex-wrap flex">
+    @for (match of liveMatches; track $index) 
+    {
+        
+            <div class="p-2  md:w-[25%] w-full">
+            <app-match-card [match]="match"></app-match-card>
+        </div>
+       
+        <!-- {{match.teamHeading}}
+        <br>
+        {{$index}} -->
+    }
+     @empty {
+        Today no match.
+     }
+    </div>
+</div>
